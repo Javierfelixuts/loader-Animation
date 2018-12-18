@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.loadAnimation{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #498667;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 50;
+	animation:changeBg 2s linear infinite;
+	overflow: hidden;
+}
+.contentBall{
+	width: 200px;
+	height: 200px;
+	background: radial-gradient(#ff0091, #0c183c);
+	border-radius: 50%;
+	position: relative;
+	animation:load 2s linear infinite;
+}
+.ball{
+	width: 50px;
+	height: 50px;
+	background: red;
+	border-radius: 50%;
+	position: absolute;
+	box-shadow: 1px 1px 20px 3px #1c8fd6;
+}
+.ball:nth-child(1){
+	top: 0;
+	left: 0;
+	background: #4caf50;
+}
+.ball:nth-child(2){
+	top: 0;
+	right: 0;
+	background: #ffc107;
+}
+.ball:nth-child(3){
+	bottom: 0;
+	left: 0;
+	background: #03a9f4;
+}
+.ball:nth-child(4){
+	bottom: 0;
+	right: 0;
+	background: #e91e63;
+}
+.ball::after, .ball::before{
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	box-shadow: 1px 1px 20px 3px #1c8fd6;
+}
+.ball::before{
+	width: 10px;
+	height: 10px;
+}
+.ball:nth-child(1)::after{
+	top: 25px;
+	left: -45px;
+	background: #4caf50;
+}
+.ball:nth-child(1)::before{
+	top: 70px;
+	left: -70px;
+	background: #4caf50;
+}
+
+
+.ball:nth-child(2)::after{
+	top: -50px;
+	left: -18px;
+	background: #ffeb3b;
+}
+.ball:nth-child(2)::before{
+	top: -80px;
+	left: -40px;
+	background: #ffeb3b;
+}
+
+.ball:nth-child(3)::after{
+	top: 70px;
+	left: 30px;
+	background: #00bcd4;
+}
+.ball:nth-child(3)::before{
+	top: 120px;
+	left: 70px;
+	background: #00bcd4;
+}
+
+.ball:nth-child(4)::after{
+	top: 0px;
+	right: -40px;
+	background: #e91e63;
+}
+.ball:nth-child(4)::before{
+	top: -20px;
+	right: -60px;
+	background: #e91e63;
+}
+
+@keyframes load{
+	30%{
+		width: 10px;
+		height: 10px;
+		transform: rotate(50deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes changeBg{
+	0%{
+		background: #ffeb3b;
+	}
+	30%{
+		background: #9c27b0;
+	}
+	60%{
+		background: #3f51b5;
+	}
+	100%{
+		background: #e91e63;
+	}
+}
+
+
+header{
+	width: 100%;
+	height: 30vh;
+	background: purple;
+	text-align: center;
+	color:#fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
